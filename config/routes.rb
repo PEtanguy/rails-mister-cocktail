@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :cocktails do
+
+  root to: 'cocktails'
+  resources :cocktails, except: :index do
     resources :doses, only: [:new, :create]
     resources :ingredient
   end
