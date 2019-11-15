@@ -24,15 +24,15 @@ body {
 }
 
 .cards {
-  background-color: #BBBBBB;
-  border-radius: 30px;
+  // background-color: #BBBBBB;
+  // border-radius: 30px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
 
 .navbar-lewagon {
   justify-content: space-around;
-  background: white;
+  background: #00FFC5;
 }
 
 .navbar-lewagon .navbar-collapse {
