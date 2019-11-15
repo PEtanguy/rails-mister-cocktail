@@ -18,7 +18,7 @@ body {
   // justify-content: center;
   // align-items: center;
   // flex-direction: column;
-  background-image: url(image1.jpg);
+  background-color: black;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -27,21 +27,35 @@ body {
   background-color: #BBBBBB;
   border-radius: 30px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-
+  grid-template-columns: 1fr 1fr 1fr;
 }
+
+.navbar-lewagon {
+  justify-content: space-around;
+  background: white;
+}
+
+.navbar-lewagon .navbar-collapse {
+  flex-grow: 0;
+}
+
+.navbar-lewagon .navbar-brand img {
+  width: 40px;
+}
+
 
 .card {
   background-color: white;
-  border: solid 2px;
+
   padding: 20px;
   margin: 20px;
   border-radius: 20px;
 
+
 }
 
 .container {
-  display:flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
@@ -49,8 +63,9 @@ body {
 }
 
 .list {
-  border: solid 2px;
+  border: solid 5px;
   border-radius: 10px;
+  border-color: #00FFC5;
   margin: 10px;
   padding: 5px;
   display:flex;
@@ -63,6 +78,9 @@ body {
 
 }
 
+.list img {
+  border-radius: 20px;
+}
 a:hover {
   text-decoration: none;
 

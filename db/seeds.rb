@@ -3,6 +3,17 @@
 #
 # Examples:
 #
+# require "net/http"
+# require 'json'
+
+# url = Cloudinary::Api.resources
+# # list = JSON.parse(url)
+
+# url["resources"].each do |url|
+
+#    puts url["public_id"]
+
+# end
 
 
 # puts "done"
@@ -13,7 +24,7 @@
 # Dose.create(description: "5cl")
 # Dose.create(description: "50cl")
 
-require 'open-uri'
+# require 'open-uri'
 
 
 # url = "https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list"
@@ -36,20 +47,20 @@ require 'open-uri'
 # end
 
 
-require 'net/http'
-require 'json'
+# require 'net/http'
+# require 'json'
 
-url = "https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list"
-uri = URI(url)
-# array = []
-response = Net::HTTP.get(uri)
-list = JSON.parse(response)
+# url = "https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list"
+# uri = URI(url)
+# # array = []
+# response = Net::HTTP.get(uri)
+# list = JSON.parse(response)
 
-list["drinks"].each do |hashh|
+# list["drinks"].each do |hashh|
 
-   Ingredient.create!(name: hashh["strIngredient1"])
+#    Ingredient.create!(name: hashh["strIngredient1"])
 
-end
+# end
 
 
 # puts list["drinks"].class
