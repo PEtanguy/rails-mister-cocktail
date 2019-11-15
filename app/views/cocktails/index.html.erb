@@ -2,7 +2,8 @@
   <h1>Cocktails: </h1>
     <div class= "row">
       <p><% @cocktails.each do |cocktail| %>
-        <div class= "list col-lg-4">
+        <div class= "list col-lg-4 card">
+          <%= cl_image_tag("oemmluu0nm8zrwhxfaqm", width: 400, height: 300, crop: :fill) %>
           <%= link_to cocktail.name, cocktail_path(cocktail) %>
         </div>
         <br>
