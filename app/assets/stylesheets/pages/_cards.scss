@@ -1,0 +1,18 @@
+.cards {
+  // background-color: #BBBBBB;
+  // border-radius: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+
+
+.card {
+  background-color: white;
+
+  padding: 20px;
+  margin: 20px;
+  border-radius: 20px;
+
+
+}

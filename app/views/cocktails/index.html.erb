@@ -2,26 +2,49 @@
 <% array_of_ids = [] %>
 
 <% url["resources"].each do |url| %>
-  <% array_of_ids << url["public_id"] %>
+<% array_of_ids << url["public_id"] %>
 <% end %>
 
 
 
 <div class="container">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/Paol5brD9rE?autoplay=1&loop=1&playlist=Paol5brD9rE&controls=0&mute=1&frameborder=0"></iframe>
+
+  <% if @cocktails.empty? %>
+    <div class="centered">
+      <p>Your cocktail portfolio is empty!</p>
+    </div>
+
+  <% else %>
+
+
     <div class= "cards">
       <% @cocktails.each do |cocktail| %>
-        <div class= "list card">
-          <% id = array_of_ids.sample %>
-          <% array_of_ids.delete(id) %>
-          <%= cl_image_tag(id, width: 250, height: 200, crop: :fill) %>
-          <%= link_to cocktail.name, cocktail_path(cocktail) %>
+      <div class= "list col-lg-3 card">
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path cocktail.photo.key, height: 300, width: 400, crop: :fill %>')">
+          photo
         </div>
-        <% end %>
+
+           <%= cl_image_tag cocktail.photo.key %>
+           <%= link_to cocktail.name, cocktail_path(cocktail) %>
+         </div>
+         <br>
 
 
-
-
+      <% end %>
     </div>
-    <%= link_to "add a cocktail", new_cocktail_path, class: "btn btn-primary" %>
+
+  <% end %>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<%= link_to "add a cocktail", new_cocktail_path, class: "btn btn-primary" %>
 </div>
