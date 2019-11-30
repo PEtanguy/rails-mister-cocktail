@@ -35,32 +35,32 @@
 # ingredients = JSON.parse(serialized_ingredients)
 
 
-# # parsed = ActiveSupport::JSON.decode(json)
-# #   parsed['ResultSet']['Result'].each do |result|
-# #     ingredient = Ingredient.create!({
-# #       name: strIngredient1
-# #       })
-# #   end
+# parsed = ActiveSupport::JSON.decode(json)
+#   parsed['ResultSet']['Result'].each do |result|
+#     ingredient = Ingredient.create!({
+#       name: strIngredient1
+#       })
+#   end
 
 # File.open("https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list", 'wb') do |file|
 #   file.write(JSON.generate(ingredients))
 # end
 
 
-# require 'net/http'
-# require 'json'
+require 'net/http'
+require 'json'
 
-# url = "https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list"
-# uri = URI(url)
-# # array = []
-# response = Net::HTTP.get(uri)
-# list = JSON.parse(response)
+url = "https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list"
+uri = URI(url)
+# array = []
+response = Net::HTTP.get(uri)
+list = JSON.parse(response)
 
-# list["drinks"].each do |hashh|
+list["drinks"].each do |hashh|
 
-#    Ingredient.create!(name: hashh["strIngredient1"])
+   Ingredient.create!(name: hashh["strIngredient1"])
 
-# end
+end
 
 
 # puts list["drinks"].class
